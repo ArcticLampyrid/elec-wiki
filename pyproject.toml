@@ -4,13 +4,12 @@ version = "0.1.0"
 description = ""
 authors = []
 readme = "README.md"
-packages = [{include = "elec_wiki"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 mkdocs-material = "^9.4.9"
 mkdocs-awesome-pages-plugin = "^2.9.2"
-
+mkdocs = "^1.5.3"
 
 [build-system]
 requires = ["poetry-core"]
