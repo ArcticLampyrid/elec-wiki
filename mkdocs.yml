@@ -9,7 +9,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.instant
-    - navigation.indexes
   language: 'zh'
   palette:
     # Palette toggle for light mode
