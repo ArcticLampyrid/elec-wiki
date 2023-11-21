@@ -1,14 +1,24 @@
 site_name: Elec Wiki
 site_description: 电子开发者的知识库
 site_author: Fans of Electronics
+site_url: https://elec.alampy.com
+strict: false
+
+repo_name: ArcticLampyrid/elec-wiki
+repo_url: https://github.com/ArcticLampyrid/elec-wiki
+edit_uri: edit/main/docs/
+
 copyright: 'Copyright &copy; 2023 Fans of Electronics'
 theme:
   name: material
+  custom_dir: docs/overrides
   icon:
     logo: 'material/school'
   features:
     - navigation.tabs
     - navigation.instant
+    - navigation.footer
+    - content.action.edit
   language: 'zh'
   palette:
     # Palette toggle for light mode
@@ -29,13 +39,12 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 plugins:
-    - awesome-pages
-plugins:
-    - awesome-pages:
-        strict: false
-        order: asc
-        sort_type: natural
-        order_by: title
+  - git-authors
+  - awesome-pages:
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
         
 markdown_extensions:
   - admonition
