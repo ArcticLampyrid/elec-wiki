@@ -195,6 +195,7 @@ project
 如果您使用 EIDE，可以在 EIDE 面板中添加。
 
 如果您使用的是基于 CMake 的嵌入式开发环境，那么请参照上文中的 CMake 项目的方法，注意：
+
 - 如果您是用 橙子🍊 的小工具 [STM32Tesseract](https://github.com/ArcticLampyrid/stm32tesseract) 生成的 CMake 配置，建议添加到 `CMakeProjectConfig.cmake` 最后面。`CMakeLists.txt` 会在再次生成信息的过程中被自动覆盖。
 - 如果您是使用的 CLion 生成的 CMake 配置，请将其添加到 `CMakeLists_template.txt` 最后面。`CMakeLists.txt` 会在再次生成信息的过程中被自动覆盖。
 
