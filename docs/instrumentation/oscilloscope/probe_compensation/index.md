@@ -9,8 +9,8 @@
 示波器专用探头往往并联了一个补偿电容 $C_{comp}$，可以通过螺丝刀进行调节，以保证 10:1 的分压比。理想情况下，可以通过以下公式导出补偿电容：
 
 $$
-\displaylines{C_{\text{parallel}}=C_{\text{scope}}+C_{\text{cable}}+C_{\text{comp}} \\
-\frac{1}{R_{\text{tip}} \cdot C_{\text{tip}}}=\frac{1}{R_{\text{scope}} \cdot C_{\text{parallel}}}}
+C_{\text{parallel}}=C_{\text{scope}}+C_{\text{cable}}+C_{\text{comp}} \\
+\frac{1}{R_{\text{tip}} \cdot C_{\text{tip}}}=\frac{1}{R_{\text{scope}} \cdot C_{\text{parallel}}}
 $$
 
 ## 调节补偿电容
