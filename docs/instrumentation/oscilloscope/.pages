@@ -1,0 +1,11 @@
+title: 示波器
+nav:
+- overview
+- basic_usage
+- trigger
+- measure
+- cursor
+- math
+- xy_mode
+- probe_compensation
+- ...
