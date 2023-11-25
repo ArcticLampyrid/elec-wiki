@@ -8,3 +8,5 @@ document$.subscribe(() => {
         ],
     })
 })
+
+Fancybox.bind(".md-content img", {});

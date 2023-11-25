@@ -86,9 +86,11 @@ markdown_extensions:
       alternate_style: true
 
 extra_javascript:
-  - javascripts/katex.js 
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.28/fancybox/fancybox.umd.min.js
+  - javascripts/main.js
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.28/fancybox/fancybox.min.css
