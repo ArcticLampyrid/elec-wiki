@@ -133,6 +133,38 @@ project
 
 为了能够在 `main.c` 中能通过引入 `#include <my_math.h>`，我们需要将 `project/include` 目录添加到头文件目录中。  
 
+### `static` 关键词
+如果一个函数或变量不希望被其它文件使用，那么我们可以在定义前加上 `static` 关键词，表示这个实体只能在当前文件中使用，不能在其它文件中使用。
+
+默认情况下（不加 `static` 关键词），函数和变量都是导出的，可以在其它文件中使用。且所有参与链接的文件中，不能有多个文件定义相同名称的实体，否则链接器会报错。加入 `static` 关键词后，函数和变量都是当前文件（当前编译单元）私有的，因此不会和其它文件中的同名实体冲突。
+
+例如：以下两个文件同时使用会报错
+=== "源文件 `a.c`"
+    ```c
+    int test(){
+        // test1
+    }
+    ```
+=== "源文件 `b.c`"
+    ```c
+    int test(){
+        // test2
+    }
+    ```
+
+以下两个文件同时使用不会报错
+=== "源文件 `a.c`"
+    ```c
+    static int test(){
+        // test1
+    }
+    ```
+=== "源文件 `b.c`"
+    ```c
+    static int test(){
+        // test2
+    }
+    ```
 
 ## 操作实践
 ### CubeMX 生成的工程文件的目录结构
@@ -218,3 +250,60 @@ project
 
 - 如果您是用 橙子🍊 的小工具 [STM32Tesseract](https://github.com/ArcticLampyrid/stm32tesseract) 生成的 CMake 配置，建议添加到 `CMakeProjectConfig.cmake` 最后面。`CMakeLists.txt` 会在再次生成信息的过程中被自动覆盖。
 - 如果您是使用的 CLion 生成的 CMake 配置，请将其添加到 `CMakeLists_template.txt` 最后面。`CMakeLists.txt` 会在再次生成信息的过程中被自动覆盖。
+
+## 使用实例
+### 全局函数
+=== "源文件 `my.c`"
+    ```c
+    #include "my.h"
+    void my_func()
+    {
+        // 有函数体，是函数定义
+    }
+    ```
+
+=== "头文件 `my.h`"
+    ```c
+    #ifndef MY_H
+    #define MY_H
+
+    void my_func(); // 注意分号结束。此句函数声明，不是函数定义。
+
+    #endif
+    ```
+
+### 全局变量
+=== "源文件 `my.c`"
+    ```c
+    #include "my.h"
+    int my_var = 0; // 变量定义，可以赋初始值
+    ```
+
+=== "头文件 `my.h`"
+    ```c
+    #ifndef MY_H
+    #define MY_H
+
+    extern int my_var; // 注意 extern 关键词。此句是变量声明，不是变量定义，不要赋初始值。
+
+    #endif
+    ```
+
+### 静态函数
+=== "源文件 `my.c`"
+    ```c
+    // 静态函数定义
+    // 静态函数只能在当前文件中使用，不能在其它文件中使用
+    static void my_static_func()
+    {
+        // 有函数体，是函数定义
+    }
+    ```
+
+### 静态变量
+=== "源文件 `my.c`"
+    ```c
+    // 静态变量定义，可以赋初始值
+    // 静态变量只能在当前文件中使用，不能在其它文件中使用
+    static int my_static_var = 0;
+    ```
