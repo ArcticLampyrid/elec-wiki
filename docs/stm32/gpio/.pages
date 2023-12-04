@@ -1,4 +1,6 @@
 title: GPIO
 nav:
 - getting_started
+- output
+- input
 - ...
