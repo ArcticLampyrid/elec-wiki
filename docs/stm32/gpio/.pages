@@ -4,4 +4,5 @@ nav:
 - output
 - input
 - pull_up_down_resistor
+- interrupts
 - ...
