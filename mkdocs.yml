@@ -97,3 +97,8 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.28/fancybox/fancybox.min.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-0PXERL3YM9
