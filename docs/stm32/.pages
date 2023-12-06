@@ -3,4 +3,5 @@ nav:
 - gpio
 - multi_file_project
 - clock_tree
+- systick
 - communication
