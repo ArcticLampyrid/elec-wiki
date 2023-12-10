@@ -2,4 +2,5 @@ title: 定时器（Timer）
 nav:
 - basic
 - pwm_generation
+- slave_mode
 - ...
