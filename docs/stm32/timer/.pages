@@ -3,4 +3,5 @@ nav:
 - basic
 - pwm_generation
 - slave_mode
+- input_capture
 - ...
