@@ -4,4 +4,5 @@ nav:
 - pwm_generation
 - slave_mode
 - input_capture
+- pwm_input
 - ...
