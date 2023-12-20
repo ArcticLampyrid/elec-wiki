@@ -2,6 +2,7 @@ title: STM32 单片机开发
 nav:
 - gpio
 - multi_file_project
+- volatile_qualified
 - clock_tree
 - systick
 - timer

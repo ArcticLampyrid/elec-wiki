@@ -92,8 +92,8 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     
 8. 编写以下中断回调函数：
     ```c
-    double duty;
-    double freq;
+    volatile double duty;
+    volatile freq;
     void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     {
         if (htim->Instance == TIM2) {
@@ -120,6 +120,13 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
         HAL_Delay(1000);
     }
     ```
+
+???+ "提示：关于 volatile 修饰"
+    在上述代码中，我们使用了 `volatile` 修饰 `duty` 和 `freq`，这是因为这两个变量会在中断回调中和中断回调外同时使用，而 `volatile` 将保证所有读写均为真实的内存访问，而非某种本地缓存。
+    
+    中断是一种强制“跳转”，不属于正常 C/C++ 执行流程，因此在常规的执行流程分析之外。如不标注 `volatile`，可能会被编译器错误地假设某些值不变，导致错误的运行结果。如在上述循环打印至 `USART2` 的代码中，如果不标注 `volatile`，编译器可能错误地认为 `freq` 和 `duty` 的值保持不变（循环打印的代码中确实看不出对 `freq` 和 `duty` 的改变，这两者的改变完全依靠中断回调这种打破正常运行流程的方式），从而不会重新读取其值，导致打印的值不会改变。
+    
+    有关 `volatile` 修饰的详细介绍请参见 [volatile 修饰](../../volatile_qualified/index.md)。
 
 ### 分析捕获过程
 ![](input_capture_exp.png)

@@ -36,6 +36,7 @@ $$
 
 CubeMX 通常将生成类似如下代码：
 ```c
+volatile uint32_t uwTick;
 void SysTick_Handler(void)
 {
     // 响应 SysTick 中断
