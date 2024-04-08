@@ -100,5 +100,5 @@ extra_css:
 
 extra:
   analytics:
-    provider: google
-    property: G-0PXERL3YM9
+    provider: cloudflareinsights
+    property: 999960a09fd44d63bc39abfe9a0e55a5
