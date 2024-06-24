@@ -18,3 +18,6 @@
 应当注意的是，本 Wiki 仍然处于高度实验性的早期阶段，且即使达成最终阶段，亦不可能取代大量的优质文献材料。本 Wiki 更多是提供一个良好的自主学习的起点，而非自主学习的全部。终有一天，您会发现本 Wiki 所覆盖的知识已经远远无法满足您的求知倾向，而您也已经具备了足够的优秀习惯与能力去更大的世界进行更加主动、深入的探索了。
 
 愿您对无限未知的渴求永不止息，愿您在知识的海洋中快乐地航行。祝您自主学习愉快！
+
+## 联系我们
+欢迎加入 QQ 群 [948281997](https://h5.qun.qq.com/h5/qun-share-page/?_wv=1027&k=vbIf3zeOmaP8sI6bN1RQB02CzLQRMsDY&authKey=mSBNdIxwjtycOQCpJ5ScTYYlHufmKCb0nYAIcqgvBaO5KMDTijoWHXrDUP2vSHkn&market_channel_source=948281997_1&noverify=0&group_code=948281997)（上电冒烟俱乐部）。
