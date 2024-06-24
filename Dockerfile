@@ -7,7 +7,7 @@ ENV POETRY_NO_INTERACTION=1 \
     POETRY_CACHE_DIR=/tmp/poetry_cache
 WORKDIR /app
 COPY ./pyproject.toml ./poetry.lock /app/
-RUN --mount=type=cache,target=$POETRY_CACHE_DIR poetry install
+RUN --mount=type=cache,target=$POETRY_CACHE_DIR poetry install --no-root
 COPY . /app/
 RUN poetry run mkdocs build
 

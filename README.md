@@ -22,7 +22,7 @@ sudo pacman -S git python python-poetry
 
 然后，在本项目根目录下执行以下命令：
 ```bash
-poetry install
+poetry install --no-root
 poetry run mkdocs build
 ```
 
